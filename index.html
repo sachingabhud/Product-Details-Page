@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Details</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <section class="product-carousel">
+        <div class="main-image">
+          <img id="mainImage" src="" alt="Product Image" />
+        </div>
+
+        <div class="carousel-controls">
+          <button id="prevButton">&lt;</button>
+          <div class="thumbnails" id="thumbnails"></div>
+          <button id="nextButton">&gt;</button>
+        </div>
+      </section>
+
+      <section class="product-info">
+        <h2 id="productName">The Life in Bloom Pendant</h2>
+        <p id="productPrice">Rs.20,920</p>
+        <p id="productDescription">
+          The Life in Bloom Pendant is a beautifully crafted jewelry piece that
+          symbolizes growth and renewal, featuring delicate floral designs that
+          reflect the beauty of nature.
+        </p>
+
+        <div class="product-specification">
+          <div class="spec-item">
+            <label for="variant">Choose a variant:</label>
+            <select id="variant">
+              <option value="small">Small</option>
+              <option value="medium">Medium</option>
+              <option value="large">Large</option>
+            </select>
+          </div>
+          <div class="spec-item">
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" min="1" value="1" />
+          </div>
+        </div>
+
+        <button id="addToCartButton">Add to Cart</button>
+        <p id="confirmationMessage"></p>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

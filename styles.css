@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-carousel {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+
+.main-image {
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  margin-bottom: 10px;
+}
+
+.main-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumbnails {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.thumbnails img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.3s;
+}
+
+.thumbnails img:hover {
+  border-color: #000;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 600px;
+  margin-top: 10px;
+}
+
+button {
+  background-color: transparent;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 24px;
+  color: black;
+  font-weight: bold;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+#productName {
+  font-size: 24px;
+}
+
+#productPrice {
+  font-size: 20px;
+  font-weight: bold;
+  color: green;
+  margin: 10px 0;
+}
+
+#productDescription {
+  margin: 10px 0;
+}
+
+#addToCartButton {
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  cursor: pointer;
+  margin-top: 3rem;
+  width: fit-content;
+}
+
+#confirmationMessage {
+  color: green;
+  margin-top: 10px;
+}
+
+.product-specification {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 12px 0;
+}
+
+.spec-item {
+  display: flex;
+  flex-direction: column;
+  margin-right: 30px;
+  margin-top: 10px;
+}
+
+.spec-item select,
+.spec-item input {
+  padding: 8px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .thumbnails {
+    justify-content: flex-start;
+  }
+
+  .main-image,
+  .carousel-controls {
+    width: 100%;
+  }
+
+  .product-specification {
+    flex-direction: column;
+  }
+
+  .product-carousel {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  button {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+
+  #productName {
+    font-size: 20px;
+  }
+
+  #productPrice {
+    font-size: 18px;
+  }
+}
